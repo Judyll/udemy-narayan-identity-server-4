@@ -1,0 +1,38 @@
+============IdentityServer4
+
+* Is a framework that is built on top of OpenID Connect and OAuth 2.0 for ASP.NET CORE 2.0
+
+============Authentication as a service
+
+* You can have your web application, your native applications, your mobile apps, your web services,
+web APIs develop separately or hosted separately.  However, they can use the same authentication 
+service such as IdentityServer4
+* You don't need to reinvent or recreate your authentication code on top of each application
+or each service.  You can have a centralized log-in or workflow in one place.
+
+============Single Sign On (SSO)
+
+* If you have everything centralized, you can have multiple applications and application type
+that can log-in/log-out in a centralized placed.
+
+============API's to have Access Control
+
+* You can have various API's that are registered through the Identity Server and make themselves use
+the Identity Server to make calls to other servers like server-to-server, it can have web apps
+calling servers or web apis, it can have single-page applications that are javascript framework
+based, and also your native mobile apps they can also be secured and given control and all of the 
+permissions and access control can be registered through the IdentityServer4
+
+============Other Names For IdentityServer4:
+
+1. Secure Token Service (STS)
+2. Identity Provider
+3. Auth Server
+
+============Keep In Mind IdentityServer4 Is....
+
+* Centralized authentication 
+* Authentication as a service where you can register users, clients, and any apps to make it 
+secure in a centralized location 
+
+
