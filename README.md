@@ -1,4 +1,4 @@
-# udemy-narayan-getting-started-net-core-identity-server-4
+# udemy-narayan-identity-server-4
 Get Started with .NET Core Identity Server and Securing your Applications!
 
 COURSE URL: https://www.udemy.com/getting-started-dot-net-core-identity-server-4/learn/v4/overview
