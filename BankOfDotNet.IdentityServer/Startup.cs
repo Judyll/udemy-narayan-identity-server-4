@@ -28,7 +28,8 @@ namespace BankOfDotNet.IdentityServer
                 // We have clients that will be registered to our Identity service and those clients
                 // are managed by IdentiyServer4 and have permissions to access some resources.
                 .AddInMemoryClients(Config.GetClients())
-                // Add the in-memory test users for testing
+                // Add the in-memory test users for testing and to be used
+                // For the GrantTypes.ResourceOwnerPassword grant types in the BankOfDotNet.ConsoleResourceOwner project
                 .AddTestUsers(Config.GetTestUsers());
         }
 

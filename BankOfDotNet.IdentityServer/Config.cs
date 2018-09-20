@@ -105,7 +105,8 @@ namespace BankOfDotNet.IdentityServer
                     AllowedScopes = { "BankOfDotNetAPI" }
                 },
 
-                //GrantTypes.ResourceOwnerPassword grant type
+                // Used by BankOfDotNet.ConsoleResourceOwner
+                // GrantTypes.ResourceOwnerPassword grant type
                 new Client
                 {
                     ClientId = "ResOwnerPwd-Client",

@@ -62,5 +62,7 @@ to our API.
 2. Debug->Run without debugging
 3. Set BankOfDotNet.API as start-up project
 4. Debug->Run without debugging
-5. Right-click on BankOfDotNet.ConsoleClient -> Debug -> Start new instance
+5. Select what type of client you want to run by:
+	Right-click on BankOfDotNet.ConsoleClient -> Debug -> Start new instance, or
+	Right-click on BankOfDotNet.ConsoleResourceOwner -> Debug -> Start new instance
 

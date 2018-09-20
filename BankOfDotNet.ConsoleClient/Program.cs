@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace BankOfDotNet.ConsoleClient
 {
+    // A console client which uses the GrantTypes.ClientCredentials
     class Program
     {
         public static void Main(string[] args) => MainAsync().GetAwaiter().GetResult();
