@@ -2,6 +2,7 @@
 Get Started with .NET Core Identity Server and Securing your Applications!
 
 COURSE URL: https://www.udemy.com/getting-started-dot-net-core-identity-server-4/learn/v4/overview
+
 COURSE NOTES: https://github.com/Judyll/udemy-narayan-identity-server-4/blob/master/WhatIsIdentityServer4Notes.txt
 
 Are you a student or professional in the field of software engineering using .NET Core and need to integrate security middleware within your Web Application and Web API's? Have you been looking for a quick and easy way to get up and running with the new Cross Platform .NET Core and Identity Server 4 technology and don't want to go through an overwhelming amount of material just to get your environment configured? Don't worry as THIS IS THE COURSE FOR YOU! 
