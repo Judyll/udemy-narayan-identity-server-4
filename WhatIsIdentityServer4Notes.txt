@@ -49,4 +49,17 @@ and plug it in as middleware to our API.  That way, any tokens that are incoming
 and everything gets checked againsts our issuer (BankOfDotNet.IdentityServer).  And also, define through the 
 package that the token we are validating is already managed by BankOfDotNet.IdentityServer.  The idea is 
 to validate our token and the token is defined to be used by BankOfDotNet.API.
-2. 
+
+============Creating a Console app that consumes the BankOfDotNet.API
+
+1. We can use a NuGet package IdentityModel and have the client set-up to behind the scene use the built-in packages and libraries
+to make a call to BankOfDotNet.IdentityServer, get a token back, and finally use an http client to make calls
+to our API.
+
+============RUN THE PROJECTS IN THIS ORDER
+
+1. Set BankOfDotNet.IdentityServer as start-up project.
+2. Debug->Run without debugging
+3. Set BankOfDotNet.API as start-up project
+4. Debug->Run without debugging
+5. Right-click on BankOfDotNet.ConsoleClient -> Debug -> Start new instance

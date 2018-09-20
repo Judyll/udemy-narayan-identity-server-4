@@ -10,7 +10,12 @@
 			"name": "GetCustomers()",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImVhMTRmMzY1ZmQ0MzVjZjBkMDQ1N2Q1OWE2OWFlOGYyIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1Mzc0MDk2MDUsImV4cCI6MTUzNzQxMzIwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJCYW5rT2ZEb3ROZXRBUEkiXSwiY2xpZW50X2lkIjoiQ2xpZW50Iiwic2NvcGUiOlsiQmFua09mRG90TmV0QVBJIl19.QPk6XpVQNVQFNhTfUamAIawljmjil6JutOYuOX9vVIj6TjCUNbbE0lRMQKHqs_g8F3uDt7U7fiRytB4gNR7TR0g2TyiFO2NeMoiAoXxuQxrSQwJl9HuXyDcLNxgcbB5WpNwW9bi933GuNBCcnCNtS12seAXHISFzuKqyOCbRdI8c1m7yvbNBAUrZq0xhIkQ1EwYJyUbg7NJVt0NiPUmJOhu2_fDTx6XgB7XybQsWTwbiLq6a7-TZOu4oQYkH7-eaQ69wWc-ZxJSuNeMnn2YmJXnw0nqCIsx-zKWiOAE_5OzUMUEjZHLadfbcnVEhLJGzQs5tnZk0eeWSWWrk0cPf8A"
+					}
+				],
 				"body": {},
 				"url": {
 					"raw": "http://localhost:51085/api/customers",
@@ -32,10 +37,15 @@
 			"name": "GetCustomer([FromRoute] long id)",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImVhMTRmMzY1ZmQ0MzVjZjBkMDQ1N2Q1OWE2OWFlOGYyIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1Mzc0MDk2MDUsImV4cCI6MTUzNzQxMzIwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJCYW5rT2ZEb3ROZXRBUEkiXSwiY2xpZW50X2lkIjoiQ2xpZW50Iiwic2NvcGUiOlsiQmFua09mRG90TmV0QVBJIl19.QPk6XpVQNVQFNhTfUamAIawljmjil6JutOYuOX9vVIj6TjCUNbbE0lRMQKHqs_g8F3uDt7U7fiRytB4gNR7TR0g2TyiFO2NeMoiAoXxuQxrSQwJl9HuXyDcLNxgcbB5WpNwW9bi933GuNBCcnCNtS12seAXHISFzuKqyOCbRdI8c1m7yvbNBAUrZq0xhIkQ1EwYJyUbg7NJVt0NiPUmJOhu2_fDTx6XgB7XybQsWTwbiLq6a7-TZOu4oQYkH7-eaQ69wWc-ZxJSuNeMnn2YmJXnw0nqCIsx-zKWiOAE_5OzUMUEjZHLadfbcnVEhLJGzQs5tnZk0eeWSWWrk0cPf8A"
+					}
+				],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:51085/api/customers/2",
+					"raw": "http://localhost:51085/api/customers/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -44,7 +54,7 @@
 					"path": [
 						"api",
 						"customers",
-						"2"
+						"1"
 					]
 				},
 				"description": "Get specific customer"
@@ -55,7 +65,12 @@
 			"name": "DeleteCustomer([FromRoute] long id)",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImVhMTRmMzY1ZmQ0MzVjZjBkMDQ1N2Q1OWE2OWFlOGYyIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1Mzc0MDk2MDUsImV4cCI6MTUzNzQxMzIwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJCYW5rT2ZEb3ROZXRBUEkiXSwiY2xpZW50X2lkIjoiQ2xpZW50Iiwic2NvcGUiOlsiQmFua09mRG90TmV0QVBJIl19.QPk6XpVQNVQFNhTfUamAIawljmjil6JutOYuOX9vVIj6TjCUNbbE0lRMQKHqs_g8F3uDt7U7fiRytB4gNR7TR0g2TyiFO2NeMoiAoXxuQxrSQwJl9HuXyDcLNxgcbB5WpNwW9bi933GuNBCcnCNtS12seAXHISFzuKqyOCbRdI8c1m7yvbNBAUrZq0xhIkQ1EwYJyUbg7NJVt0NiPUmJOhu2_fDTx6XgB7XybQsWTwbiLq6a7-TZOu4oQYkH7-eaQ69wWc-ZxJSuNeMnn2YmJXnw0nqCIsx-zKWiOAE_5OzUMUEjZHLadfbcnVEhLJGzQs5tnZk0eeWSWWrk0cPf8A"
+					}
+				],
 				"body": {},
 				"url": {
 					"raw": "http://localhost:51085/api/customers/2",
@@ -82,6 +97,10 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImVhMTRmMzY1ZmQ0MzVjZjBkMDQ1N2Q1OWE2OWFlOGYyIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1Mzc0MDk2MDUsImV4cCI6MTUzNzQxMzIwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJCYW5rT2ZEb3ROZXRBUEkiXSwiY2xpZW50X2lkIjoiQ2xpZW50Iiwic2NvcGUiOlsiQmFua09mRG90TmV0QVBJIl19.QPk6XpVQNVQFNhTfUamAIawljmjil6JutOYuOX9vVIj6TjCUNbbE0lRMQKHqs_g8F3uDt7U7fiRytB4gNR7TR0g2TyiFO2NeMoiAoXxuQxrSQwJl9HuXyDcLNxgcbB5WpNwW9bi933GuNBCcnCNtS12seAXHISFzuKqyOCbRdI8c1m7yvbNBAUrZq0xhIkQ1EwYJyUbg7NJVt0NiPUmJOhu2_fDTx6XgB7XybQsWTwbiLq6a7-TZOu4oQYkH7-eaQ69wWc-ZxJSuNeMnn2YmJXnw0nqCIsx-zKWiOAE_5OzUMUEjZHLadfbcnVEhLJGzQs5tnZk0eeWSWWrk0cPf8A"
 					}
 				],
 				"body": {
@@ -113,11 +132,15 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImVhMTRmMzY1ZmQ0MzVjZjBkMDQ1N2Q1OWE2OWFlOGYyIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1Mzc0MDk2MDUsImV4cCI6MTUzNzQxMzIwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJCYW5rT2ZEb3ROZXRBUEkiXSwiY2xpZW50X2lkIjoiQ2xpZW50Iiwic2NvcGUiOlsiQmFua09mRG90TmV0QVBJIl19.QPk6XpVQNVQFNhTfUamAIawljmjil6JutOYuOX9vVIj6TjCUNbbE0lRMQKHqs_g8F3uDt7U7fiRytB4gNR7TR0g2TyiFO2NeMoiAoXxuQxrSQwJl9HuXyDcLNxgcbB5WpNwW9bi933GuNBCcnCNtS12seAXHISFzuKqyOCbRdI8c1m7yvbNBAUrZq0xhIkQ1EwYJyUbg7NJVt0NiPUmJOhu2_fDTx6XgB7XybQsWTwbiLq6a7-TZOu4oQYkH7-eaQ69wWc-ZxJSuNeMnn2YmJXnw0nqCIsx-zKWiOAE_5OzUMUEjZHLadfbcnVEhLJGzQs5tnZk0eeWSWWrk0cPf8A"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"FirstName\": \"Krysia\",\n\t\"LastName\": \"Eparwa\"\n}"
+					"raw": "{\n\t\"FirstName\": \"Judyll\",\n\t\"LastName\": \"Agan\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:51085/api/customers",
@@ -136,7 +159,7 @@
 			"response": []
 		},
 		{
-			"name": "Test-IS4-token_endpoint",
+			"name": "Request Token From BankOfDotNet.IdentityServer",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -187,7 +210,7 @@
 						"token"
 					]
 				},
-				"description": "Test call to grab a token from the Identity Server"
+				"description": "Test call to grab a token from the Identity Server.\n\nThis token is will now be used as the Authorization headers when calling the API"
 			},
 			"response": []
 		}
