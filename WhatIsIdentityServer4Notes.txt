@@ -35,4 +35,18 @@ permissions and access control can be registered through the IdentityServer4
 * Authentication as a service where you can register users, clients, and any apps to make it 
 secure in a centralized location 
 
+============When launching the IdentityServer
 
+1. A console application will be shown with some "info"
+2. Run the discovery file/landing page for the clients to know what APIs, grant types, scopes are allowed by using the URL
+http://localhost:5000/.well-known/openid-configuration
+
+============To secure the BankOfDotNet.API
+
+1. Add the package IdentityServer4.AccessTokenValidation to the BankOfDotNet.API project.  This package
+helps you to add authentication handler and they will help us take our BankOfDotNet.IdentityServer authentication
+and plug it in as middleware to our API.  That way, any tokens that are incoming, they become validated
+and everything gets checked againsts our issuer (BankOfDotNet.IdentityServer).  And also, define through the 
+package that the token we are validating is already managed by BankOfDotNet.IdentityServer.  The idea is 
+to validate our token and the token is defined to be used by BankOfDotNet.API.
+2. 

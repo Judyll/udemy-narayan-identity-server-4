@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "33519a6f-ada3-4e2c-9da6-8c4893549fbc",
+		"name": "udemy-narayan-identity-server-4",
+		"description": "Get Started with .NET Core Identity Server and Securing your Applications!\r\n\r\nGITHUB: https://github.com/Judyll/udemy-narayan-identity-server-4\r\n\r\nCOURSE URL: https://www.udemy.com/getting-started-dot-net-core-identity-server-4/learn/v4/overview\r\n\r\nAre you a student or professional in the field of software engineering using .NET Core and need to integrate security middleware within your Web Application and Web API's? Have you been looking for a quick and easy way to get up and running with the new Cross Platform .NET Core and Identity Server 4 technology and don't want to go through an overwhelming amount of material just to get your environment configured? Don't worry as THIS IS THE COURSE FOR YOU!\r\n\r\nIn my course, I will teach you how to get your .NET Core Apps integrated with Identity Server 4 and help you to build and secure your Web API's through a step-by-step guided approach. I will be showing you all the necessary installation and setup needed for .NET Core, Identity Server 4, and Postman!\r\n\r\nTake this course and feel proud of the fact that you will be one step closer towards mastering .NET Core, Web API's, and Identity Server 4!\r\n\r\nENDPOINTS:\r\n\r\nGetCustomers -- Get all customers -- api/Customer GET\r\n\r\nGetCustomer(id) -- Get specific customer -- api/Customers/3 GET\r\n\r\nPutCustomer -- Update customer -- api/Customer/3 PUT CustomerObject\r\n\r\nPostCustomer -- Create customer -- api/Customer POST CustomerObject\r\n\r\nDeleteCustomer -- Delete customer -- api/Customer/3 DELETE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCustomers()",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:51085/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51085",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Get all customers"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomer([FromRoute] long id)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:51085/api/customers/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51085",
+					"path": [
+						"api",
+						"customers",
+						"2"
+					]
+				},
+				"description": "Get specific customer"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomer([FromRoute] long id)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:51085/api/customers/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51085",
+					"path": [
+						"api",
+						"customers",
+						"2"
+					]
+				},
+				"description": "Delete specific customer"
+			},
+			"response": []
+		},
+		{
+			"name": "PutCustomer([FromRoute] long id, [FromBody] Customer customer)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\": 2,\n\t\"FirstName\": \"Krysia Kristianne\",\n\t\"LastName\": \"Eparwa\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:51085/api/customers/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51085",
+					"path": [
+						"api",
+						"customers",
+						"2"
+					]
+				},
+				"description": "Update specific customer"
+			},
+			"response": []
+		},
+		{
+			"name": "PostCustomer([FromBody] Customer customer)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FirstName\": \"Krysia\",\n\t\"LastName\": \"Eparwa\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:51085/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51085",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Create a new customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Test-IS4-token_endpoint",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secretpass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "BankOfDotNetAPI",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"connect",
+						"token"
+					]
+				},
+				"description": "Test call to grab a token from the Identity Server"
+			},
+			"response": []
+		}
+	]
+}

@@ -10,7 +10,7 @@ namespace BankOfDotNet.API.Models
         public BankContext(DbContextOptions<BankContext> options)
             : base(options) { }
 
-        // The set of customers in our in-memory database
+        // The set of customers 
         public DbSet<Customer> Customers { get; set; }
     }
 }
