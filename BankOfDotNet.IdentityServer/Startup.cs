@@ -27,7 +27,9 @@ namespace BankOfDotNet.IdentityServer
                 .AddInMemoryApiResources(Config.GetAllApiResources())
                 // We have clients that will be registered to our Identity service and those clients
                 // are managed by IdentiyServer4 and have permissions to access some resources.
-                .AddInMemoryClients(Config.GetClients());
+                .AddInMemoryClients(Config.GetClients())
+                // Add the in-memory test users for testing
+                .AddTestUsers(Config.GetTestUsers());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
