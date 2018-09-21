@@ -63,6 +63,9 @@ to our API.
 3. Set BankOfDotNet.API as start-up project
 4. Debug->Run without debugging
 5. Select what type of client you want to run by:
-	Right-click on BankOfDotNet.ConsoleClient -> Debug -> Start new instance, or
-	Right-click on BankOfDotNet.ConsoleResourceOwner -> Debug -> Start new instance
+	a. Right-click on BankOfDotNet.ConsoleClient -> Debug -> Start new instance, or
+	b. Right-click on BankOfDotNet.ConsoleResourceOwner -> Debug -> Start new instance, or
+	c. Right-click on BankOfDotNet.MvcClient -> Set as startup project, run the BankOfDotNet.MvcClient 
+			profile (NOT IIS Express), and navigate to http://localhost:5003/home/secure.  
+			You will be redirected to the IS4 Open-ID Connect login.
 

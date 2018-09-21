@@ -33,7 +33,9 @@ namespace BankOfDotNet.IdentityServer
                 .AddInMemoryClients(Config.GetClients())
                 // Add the in-memory test users for testing and to be used
                 // For the GrantTypes.ResourceOwnerPassword grant types in the BankOfDotNet.ConsoleResourceOwner project
-                .AddTestUsers(Config.GetTestUsers());
+                .AddTestUsers(Config.GetTestUsers())
+                // Add the Open-ID Connect Identity scope
+                .AddInMemoryIdentityResources(Config.GetidentityResources());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
