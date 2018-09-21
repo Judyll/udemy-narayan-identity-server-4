@@ -15,6 +15,9 @@ namespace BankOfDotNet.IdentityServer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // Added when we add the IS4 UI 
+            services.AddMvc();
+
             // Plug-in our identity server middleware
             services.AddIdentityServer()
                 // We are not going to use natural certificate to sign-in tokens and everything
@@ -30,7 +33,9 @@ namespace BankOfDotNet.IdentityServer
                 .AddInMemoryClients(Config.GetClients())
                 // Add the in-memory test users for testing and to be used
                 // For the GrantTypes.ResourceOwnerPassword grant types in the BankOfDotNet.ConsoleResourceOwner project
-                .AddTestUsers(Config.GetTestUsers());
+                .AddTestUsers(Config.GetTestUsers())
+                // Add the Open-ID Connect Identity scope
+                .AddInMemoryIdentityResources(Config.GetidentityResources());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +48,12 @@ namespace BankOfDotNet.IdentityServer
 
             // We are going to plug-in the pipeline and use the identity service
             app.UseIdentityServer();
+
+            // We are going to allow for static files for the wwwroot (css, js, lib, html)
+            app.UseStaticFiles();
+
+            // Use MVC with default route
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

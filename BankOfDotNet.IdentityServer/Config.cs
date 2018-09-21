@@ -1,4 +1,5 @@
-﻿using IdentityServer4.Models;
+﻿using IdentityServer4;
+using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System.Collections.Generic;
 
@@ -6,6 +7,17 @@ namespace BankOfDotNet.IdentityServer
 {
     public class Config
     {
+        // Used for Open-ID Connect Identity scopes
+        public static IEnumerable<IdentityResource> GetidentityResources()
+        {
+            return new List<IdentityResource>
+            {
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile()
+            };
+        }
+
+        // Used for OAuth Identity scopes
         public static List<TestUser> GetTestUsers()
         {
             return new List<TestUser>
@@ -25,6 +37,7 @@ namespace BankOfDotNet.IdentityServer
             };
         }
 
+        // Used for OAuth Identity scopes
         public static IEnumerable<ApiResource> GetAllApiResources()
         {
             return new List<ApiResource>
@@ -34,6 +47,7 @@ namespace BankOfDotNet.IdentityServer
             };
         }
 
+        // Used for OAuth Identity scopes
         public static IEnumerable<Client> GetClients()
         {
             // What is a grant-type -- Is a way the clients can communicate with the resources (APIs) or 
@@ -116,7 +130,33 @@ namespace BankOfDotNet.IdentityServer
                         new Secret("secretpass".Sha256())
                     },
                     AllowedScopes = { "BankOfDotNetAPI" }
+                },
+
+                // Used by BankOfDotNet.MvcClient
+                // GrantTypes.Implicit grant type
+                new Client
+                {
+                    ClientId = "Mvc-Client",
+                    ClientName = "MCV Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+
+                    // For Implicit flow, the user is redirected from the client to the IS4
+                    // So we need a redirect URI which means how the user will be redirected "back"
+                    // after successful authentication with IS4
+                    // We are setting our MVC client port to 5003 
+                    // We are making use of signin-oidc which is for Open-ID connect
+                    RedirectUris = { "http://localhost:5003/signin-oidc" },
+
+                    // If the user logs-out from IS4, we need a post-logout redirect URI
+                    PostLogoutRedirectUris = { "http://localhost:5003/signout-callback-oidc" },
+
+                    AllowedScopes = new List<string>
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile
+                    }
                 }
+
             };
         }
     }
