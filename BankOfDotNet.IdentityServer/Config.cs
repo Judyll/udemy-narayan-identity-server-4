@@ -119,7 +119,8 @@ namespace BankOfDotNet.IdentityServer
                     AllowedScopes = { "BankOfDotNetAPI" }
                 },
 
-                // Used by BankOfDotNet.ConsoleResourceOwner
+                // Used by BankOfDotNet.ConsoleResourceOwner and
+                // BankOfDotNet-SPA-ResourceOwner (Javascript client)
                 // GrantTypes.ResourceOwnerPassword grant type
                 new Client
                 {
